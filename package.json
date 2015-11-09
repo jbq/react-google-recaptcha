@@ -7,7 +7,7 @@
     "lib": "lib/"
   },
   "scripts": {
-    "build": "node run-babel tools/build.js",
+    "build": "rm -rf lib && babel src --out-dir lib",
     "lint": "eslint src test tools webpack karma.conf.js",
     "test": "karma start --single-run && npm run build",
     "test-watch": "karma start"
